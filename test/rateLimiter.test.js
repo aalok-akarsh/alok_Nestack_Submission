@@ -43,6 +43,15 @@ beforeEach(async () => {
   await startServer();
 });
 
+test('root route confirms the service is running', async (t) => {
+  t.after(stopServer);
+
+  const response = await request('/');
+  assert.equal(response.status, 200);
+  assert.equal(response.body.ok, true);
+  assert.equal(response.body.service, 'context-aware-rate-limiter');
+});
+
 test('free AI endpoint allows five requests and rejects the sixth', async (t) => {
   t.after(stopServer);
 

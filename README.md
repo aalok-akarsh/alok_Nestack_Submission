@@ -4,7 +4,7 @@ Context-aware rate limiter built with Node.js and Express. The service applies a
 
 ## Deployment
 
-Deployment link: add the live deployment URL here before submitting.
+Deployment link: https://alok-nestack-submission.onrender.com
 
 ## How to run
 
